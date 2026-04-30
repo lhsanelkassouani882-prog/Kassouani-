@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KASSOUANI TV</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+    button {
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>KASSOUANI TV</h1>
+
+<div id="login">
+  <p>Enter Password</p>
+  <input type="password" id="pass">
+  <br>
+  <button onclick="check()">Login</button>
+</div>
+
+<div id="app" style="display:none;">
+  <h2>Welcome 🎬</h2>
+  <p>Movies & Anime Coming Soon...</p>
+</div>
+
+<script>
+function check(){
+  var p = document.getElementById("pass").value;
+  if(p == "2004"){
+    document.getElementById("login").style.display="none";
+    document.getElementById("app").style.display="block";
+  } else {
+    alert("Wrong password");
+  }
+}
+</script>
+
+</body>
+</html>
